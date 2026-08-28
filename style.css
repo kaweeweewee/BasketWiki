@@ -1,0 +1,908 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    height: 70px;
+    background: #111;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff8c00;
+}
+
+
+/* =========================
+   PLAYERS PAGE
+========================= */
+
+.players-page {
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 25px;
+}
+
+.tag {
+    color: #ff8c00;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.players-page h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.page-description {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   PLAYER LIST
+========================= */
+
+.player-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.player-item {
+    display: flex;
+    align-items: center;
+
+    background: white;
+
+    padding: 15px 20px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+    color: #222;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+    transition: 0.25s;
+}
+
+.player-item:hover {
+    transform: translateX(6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+
+/* รูป/ไอคอนนักบาส */
+
+.player-icon {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: #eee;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    margin-right: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* ชื่อนักบาส */
+
+.player-text {
+    flex: 1;
+}
+
+.player-text h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.player-text p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ลูกศร */
+
+.arrow {
+    font-size: 25px;
+    color: #aaa;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111;
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .players-page h1 {
+        font-size: 32px;
+    }
+
+}
+/* =========================
+   KOBE PROFILE
+========================= */
+
+.profile {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 25px;
+}
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    background: white;
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* กรอบรูป Kobe */
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    background: #eee;
+
+    flex-shrink: 0;
+}
+
+/* รูปจริง */
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ชื่อ */
+
+.profile-title h1 {
+    font-size: 42px;
+    margin: 8px 0;
+}
+
+.nickname {
+    color: #ff8c00;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+/* กล่องข้อมูล */
+
+.info-box {
+    margin-top: 25px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.info-box h2 {
+    margin-bottom: 20px;
+}
+
+.info-box p {
+    margin: 10px 0;
+}
+
+
+/* ประวัติ */
+
+.bio,
+.career,
+.awards {
+    margin-top: 30px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.bio h2,
+.career h2,
+.awards h2 {
+    margin-bottom: 15px;
+}
+
+.bio p {
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+
+/* Career */
+
+.career-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.career-grid div {
+    text-align: center;
+
+    padding: 20px;
+
+    background: #f5f5f5;
+
+    border-radius: 10px;
+}
+
+.career-grid strong {
+    display: block;
+
+    font-size: 30px;
+
+    color: #ff8c00;
+}
+
+.career-grid span {
+    font-size: 13px;
+}
+
+
+/* Awards */
+
+.awards ul {
+    padding-left: 20px;
+
+    line-height: 2;
+}
+
+
+/* ปุ่มกลับ */
+
+.back-button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 12px 20px;
+
+    background: #111;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+}
+
+.back-button:hover {
+    background: #ff8c00;
+}
+
+
+/* มือถือ */
+
+@media (max-width: 600px) {
+
+    .profile-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-title h1 {
+        font-size: 32px;
+    }
+
+    .career-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+/* =========================
+   HOME PAGE
+========================= */
+
+.home-hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 80px 50px;
+
+    overflow: hidden;
+}
+
+
+/* ตัวหนังสือ Home */
+
+.home-content {
+    max-width: 620px;
+}
+
+.home-tag {
+    color: #ff8c00;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.home-content h1 {
+    font-size: 70px;
+
+    line-height: 0.95;
+
+    margin-bottom: 25px;
+
+    letter-spacing: -3px;
+}
+
+.home-content h1 span {
+    color: #ff8c00;
+}
+
+.home-description {
+    color: #777;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    max-width: 500px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ปุ่ม */
+
+.home-button {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    background: #111;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+.home-button:hover {
+    background: #ff8c00;
+
+    transform: translateY(-3px);
+}
+
+
+/* ลูกบาสใหญ่ด้านขวา */
+
+.hero-ball {
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: #111;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: rotate(-8deg);
+
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.ball {
+    font-size: 150px;
+
+    transform: rotate(8deg);
+}
+
+
+/* =========================
+   EXPLORE SECTION
+========================= */
+
+.home-explore {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 50px 25px 100px;
+}
+
+.home-section-title {
+    margin-bottom: 25px;
+}
+
+.home-section-title h2 {
+    font-size: 35px;
+}
+
+
+/* การ์ด */
+
+.home-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.home-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    color: #222;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.07);
+
+    transition: 0.25s;
+}
+
+.home-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,0.12);
+}
+
+.home-card-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 10px;
+
+    background: #f1f1f1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    flex-shrink: 0;
+}
+
+.home-card h3 {
+    margin-bottom: 5px;
+}
+
+.home-card p {
+    color: #888;
+
+    font-size: 13px;
+}
+
+.home-card span {
+    margin-left: auto;
+
+    font-size: 22px;
+
+    color: #aaa;
+}
+
+
+/* =========================
+   HOME MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .home-hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 60px 25px;
+    }
+
+    .home-content h1 {
+        font-size: 48px;
+    }
+
+    .home-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-ball {
+        width: 220px;
+        height: 220px;
+
+        margin-top: 40px;
+    }
+
+    .ball {
+        font-size: 90px;
+    }
+
+    .home-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   TEAMS
+========================= */
+
+.team-conference-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.conference-card {
+    display: flex;
+    align-items: center;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+    color: #222;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+
+    transition: 0.25s;
+}
+
+.conference-card:hover {
+    transform: translateX(6px);
+}
+
+.conference-icon {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: #f1f1f1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    margin-right: 20px;
+}
+
+.conference-card div:nth-child(2) {
+    flex: 1;
+}
+
+.conference-card h2 {
+    margin-bottom: 5px;
+}
+
+.conference-card p {
+    color: #888;
+}
+
+
+/* ทีม */
+
+.team-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.team-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.07);
+
+    transition: 0.25s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-logo {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: #f1f1f1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.team-card h3 {
+    font-size: 16px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   RULES PAGE
+========================= */
+
+.rules-page {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 25px 100px;
+}
+
+.rule-section {
+    display: flex;
+    gap: 25px;
+
+    background: white;
+
+    padding: 25px;
+
+    margin-top: 18px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+
+    transition: 0.25s;
+}
+
+.rule-section:hover {
+    transform: translateX(5px);
+}
+
+.rule-number {
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #ff8c00;
+
+    min-width: 45px;
+}
+
+.rule-section h2 {
+    margin-bottom: 8px;
+}
+
+.rule-section p {
+    color: #777;
+
+    line-height: 1.7;
+}
+
+
+/* ตำแหน่ง */
+
+.rule-box {
+    margin-top: 35px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+}
+
+.rule-box h2 {
+    margin-bottom: 20px;
+}
+
+.position-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+.position-grid div {
+    background: #f5f5f5;
+
+    padding: 18px;
+
+    text-align: center;
+
+    border-radius: 10px;
+}
+
+.position-grid strong {
+    display: block;
+
+    font-size: 25px;
+
+    color: #ff8c00;
+
+    margin-bottom: 5px;
+}
+
+.position-grid span {
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+/* มือถือ */
+
+@media (max-width: 700px) {
+
+    .position-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .rule-section {
+        gap: 15px;
+    }
+
+}
